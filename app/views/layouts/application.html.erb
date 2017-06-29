@@ -7,9 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-<h1>Hello World? Are we on?</h1>
+  <div class="menuImage">
+    <img src="/assets/map.png" alt="Hello There">
+    <img src="/assets/teachable-logo.png" alt="teachable">
+    <button class="search" type="button" name="button">Search</button>
+    <button class="favorite" type="button" name="button">Favorites</button>
+  </div>
+  <%= yield  %>
 
 </body>
 </html>
