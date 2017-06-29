@@ -16,3 +16,43 @@
 
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
+
+.menuImage{
+  width: 40%;
+  position: relative;
+}
+
+.menuImage .map{
+  width: 100%;
+}
+
+.menuImage .logo{
+  position: absolute;
+  top: 5%;
+  right: 11%;
+}
+button{
+  position: absolute;
+  background: transparent;
+  border: transparent 1px solid;
+  color: white;
+  transition: 1px ease all;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  right: 0;
+}
+
+button.search {
+  top: 370px;
+  padding-right: 82px;
+}
+button.favorite{
+  top: 420px;
+  padding-right: 70px;
+}
+
+
+button.search:hover, button.favorite:hover{
+  border: white 1px solid;
+  background: rgba(255,255,255, 0.3);
+}
