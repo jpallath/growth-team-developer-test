@@ -9,9 +9,11 @@
 <body>
   <div class="menuImage">
     <img class="map" src="/assets/map.png" alt="Hello There">
-    <img  class="logo" src="/assets/teachable-logo.png" alt="teachable">
-    <button class="search" type="button" name="button">Search</button>
-    <button class="favorite" type="button" name="button">Favorites</button>
+    <%= link_to image_tag("/assets/teachable-logo.png"), "/", :class => 'logo' %>
+    <%= link_to '<button class="search" type="button">Search</button>'.html_safe, "/"%>
+    <!-- <button class="search" type="button" name="button">Search</button> -->
+    <!-- <button class="favorite" type="button" name="button">Favorites</button> -->
+    <%= link_to '<button class="favorite" type="button">Favorites</button>'.html_safe, "/favorites"%>
   </div>
   <%= yield  %>
 

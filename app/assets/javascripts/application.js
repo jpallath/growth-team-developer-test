@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+window.onload = function() {
+$(".glass").click(function() {
+  // $('.searchContainer input')
+  $('.searchContainer input').focus();
+});
+
+}
