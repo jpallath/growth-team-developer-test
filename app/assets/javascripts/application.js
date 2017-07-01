@@ -20,6 +20,10 @@
 
 window.onload = function() {
 $(".glass").click(function() {
+<<<<<<< HEAD
+=======
+  // $('.searchContainer input')
+>>>>>>> 241d7161dbd459e92bad2815e50cd4faeacc6bfa
   $('.searchContainer input').focus();
 });
 
