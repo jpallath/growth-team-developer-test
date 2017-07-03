@@ -1,5 +1,29 @@
 <div class="searchContainer">
-  <h1>Search Gems</h1>
-  <input type="text" name="" value="" placeholder="Search">
-  <img class="glass" src="/assets/magnifying-glass.png" alt="">
+  <h2>Search Gems</h2>
+  <form action="/" method="post">
+    <input type="hidden" name="authenticity_token" value="akjldfklsdjfcvlkzmxaklmdsfjvnsdfjkgvkjsdlwe432454353223rfsdvczer9534fe80jvc3408cm">
+    <labelterm for=""></label>
+      <div>
+        <input class="searcher" placeholder="Search" type="text" name="term" id="term" value="">
+        <img class="glass" src="/assets/magnifying-glass.png" alt="">
+      </div></input>
+  </form>
+</div>
+<div class="results">
+  <% if !!@response_name %>
+    <a href="https://rubygems.org/gems/<%= @response_name %>"><%= @response_name %></a>
+    <div class='star' id='<%=@response_name %>'  alt=""></div>
+    <h3>INFORMATION</h3>
+    <p><%= @response_info %></p>
+    <h3>DEPENDENCIES</h3>
+      <% if !!@response_dependencies.each do |d|%>
+        <a href="https://rubygems.org/gems/<%= d["name"] %>"><%= d["name"] %></a>
+        <div class='star' id='<%= d["name"] %>' alt=""></div><br>
+      <% end %>
+      <% else %>
+      <div>
+        None
+      </div>
+      <% end %>
+  <% end %>
 </div>

@@ -17,11 +17,29 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+// require 'gems'
 
 window.onload = function() {
 $(".glass").click(function() {
-  // $('.searchContainer input')
   $('.searchContainer input').focus();
 });
-
+$(".searchContainer .star").click(function(){
+  $(this).closest(".star").toggleClass("blue")
+  localStorage.setItem($(this).closest(".blue").attr("id"),$(this).closest(".blue").attr("id"));
+});
+$(".star .blue").click(function(){
+  console.log(localStorage.removeItem($(this).attr("id")));})
+for (var i = 0; i <localStorage.length; i++) {
+  if (localStorage.getItem(localStorage.key(i))) {
+    $("#"+(localStorage.getItem(localStorage.key(i)))).toggleClass("blue")
+  }
+}
+$(".star").click(function(){
+  $(this).closest(".star").toggleClass("blue");
+  if ($(this).closest(".star").hasClass("blue")){
+    localStorage.setItem($(this).closest(".blue").attr("id"),$(this).closest(".blue").attr("id"))
+  } else{
+    localStorage.removeItem(($(this).closest(".star").attr("id")));
+  }
+})
 }
